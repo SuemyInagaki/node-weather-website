@@ -22,7 +22,7 @@ const forecast = function(place, callback){
         else{
             const {location, current} = body
             const {country, lat: latitude, lon: longitude, localtime} = location
-            const {temperature, precip, weather_desctiptions: weather} = current
+            const {temperature, precip, weather_descriptions: weather} = current
             callback(undefined, 
                     {
                         country,

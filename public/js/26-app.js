@@ -72,7 +72,7 @@ weatherForm.addEventListener('submit', (e)=>{
             else{
                 messageOne.textContent = 'Country: '+ data.country 
                 messageTwo.textContent = 'Temperature: '+ data.temperature + 'oC'
-                messageThree.textContent = 'Latitude: ' + data.latitude + ', Longitude: '+ data.loongitude
+                messageThree.textContent = 'Latitude: ' + data.latitude + ', Longitude: '+ data.longitude
                 messageFour.textContent = 'Forecast: ' + data.weather 
                 console.log('Country: '+ data.country)
                 console.log('Temperature: '+ data.temperature + 'oC')
