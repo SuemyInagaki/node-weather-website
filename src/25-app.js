@@ -70,9 +70,9 @@ app.get('/weather', (req, res) => {
                         res.send({error})
                     }
                     else{
-                        const {country, latitude, longitude, temperature, precip} = data
+                        const {country, latitude, longitude, temperature, precip, weather, localtime} = data
                         res.send({
-                            country, latitude, longitude, temperature, precip
+                            country, latitude, longitude, temperature, precip, localtime, weather
                         })
                     }
                 })

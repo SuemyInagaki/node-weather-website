@@ -35,6 +35,8 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const messageThree = document.querySelector('#message-3')
+const messageFour = document.querySelector('#message-4')
 //messageOne.textContent = 'From JavaScript'
 
 /*
@@ -70,6 +72,8 @@ weatherForm.addEventListener('submit', (e)=>{
             else{
                 messageOne.textContent = 'Country: '+ data.country 
                 messageTwo.textContent = 'Temperature: '+ data.temperature + 'oC'
+                messageThree.textContent = 'Latitude: ' + data.latitude + ', Longitude: '+ data.loongitude
+                messageFour.textContent = 'Forecast: ' + data.weather 
                 console.log('Country: '+ data.country)
                 console.log('Temperature: '+ data.temperature + 'oC')
                 
