@@ -1,5 +1,4 @@
 //const forecast = require('../../src/utils/20-forecast.js/20-forecast.js')
-console.log('Client side javascript file is loaded')
 
 fetch('http://puzzle.mead.io/puzzle').then((response)=>{
      response.json().then((data)=>{
