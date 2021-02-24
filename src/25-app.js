@@ -18,6 +18,10 @@ console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
 
 const app = express()
+
+//Esse comando permite que o Heroku retorne um valor para port
+// ja que agora nao é mais localhost
+const port = process.env.PORT || 3000
 //define paths for express config
 //Updating views path to use 'templates' instead of views
 const viewspath = path.join(__dirname, '../templates/views')
@@ -144,10 +148,6 @@ Goal: Create two more HTML pages
 //app.com/about
 //app.com/others
 
-//para acessar: localhost:3000
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000')
-})
 
 
 /*
@@ -228,3 +228,15 @@ app.get('*', (req, res)=>{
 //     - Page not found
 //     - Help arcticle not found
 // 4. Test your work. Visit /what and /help/units
+
+
+/*
+//para acessar: localhost:3000
+app.listen(3000, ()=>{
+    console.log('Server is up on port 3000')
+})
+*/
+
+app.listen(port, ()=>{
+    console.log('Server is up on port'+ port)
+})

@@ -7,7 +7,7 @@ fetch('http://puzzle.mead.io/puzzle').then((response)=>{
 })
 
 /*
-Goal: Fetch weather!
+Goal: Fetch weather! 
 
 1. Setup a call to fetch weather for Boston
 2. Get the parse JSON response
@@ -17,7 +17,7 @@ Goal: Fetch weather!
 
 */
 console.log('Now Im doing the challenge')
-const url = 'http://localhost:3000/weather?address=fuji'
+const url = '/weather?address=fuji'
 fetch(url).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
@@ -57,7 +57,7 @@ weatherForm.addEventListener('submit', (e)=>{
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
     //const url = 'http://api.weatherstack.com/current?access_key=3c2e705be847070c958a454f16bd2c92&query=' + encoderURIComponent(location)
-    const url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location)
+    const url = '/weather?address=' + encodeURIComponent(location)
     fetch(url).then((response)=>{
         
         response.json().then((data)=>{
